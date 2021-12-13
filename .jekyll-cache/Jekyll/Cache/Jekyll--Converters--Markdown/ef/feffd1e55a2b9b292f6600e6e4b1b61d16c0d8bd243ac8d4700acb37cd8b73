@@ -1,0 +1,46 @@
+I"'<h1 id="internacionalizando-una-tienda-shopify">Internacionalizando una tienda shopify</h1>
+
+<p><img src="/assets/imgs/bolitamundo.jpg" alt="The San Juan Mountains are beautiful!" title="Mapa del Mundo" /></p>
+
+<h2 id="expandiendo-tu-tienda-a-nuevos-mercados">Expandiendo tu tienda a nuevos mercados</h2>
+
+<p>Vender nuestros productos en nuevos mercados es un gran paso dentro del creciemiento de una tienda de comercio electronico.
+Uno de los pasos fundamentales es traducir nuestra tienda a el idioma correspondiente, moneda, formato de fecha y hora etc.</p>
+
+<h2 id="shopify-i18-strategy">Shopify i18 strategy</h2>
+
+<p>Por mucho tiempo fue un reclamo de los comerciantes contar con una estrategia nativa de internacionalizacion, ha dia de hoy estan periodo de prueba <strong>Shopify Markets</strong> que apriori parece una solucion bastante completa.</p>
+
+<p>Hasta que no este totalmente en produccion la nueva catacteristica. Es necesario utilizar app para conseguir los resultados.</p>
+
+<h2 id="un-enfoque-personalizado-geolizer--langify">Un enfoque personalizado Geolizer + Langify</h2>
+
+<p>Aunque no es la unica opcion cuando se trata de app para traducciones langify se ubica en el ranking entre las mejores y mas fiables. Langify no geolocaliza al usuario por su ip sino que usa las prefencias de idioma del navegador, esto no es muy fiable para conocer la ubicacion del cliente. Geolizer ayuda a decidir la ubicacion basado  en ip  ambas aplicaciones trabajan en conjunto bastante bien por ser de la misma compañia.</p>
+
+<h2 id="configuraciones">Configuraciones</h2>
+
+<p><img src="/assets/imgs/LangifySwitcher.png" alt="The San Juan Mountains are beautiful!" title="Langify" /></p>
+
+<p>Es importante en langify desabilitar la redireccion y deteccion de idioma. Eso es  sera responsabilidad sera de la aplicacion de geolocalizacion. Cuando esta opcion se encuentra habilitada junto con otra aplicacion de geolocalizacion puede ocacionar redirecciones infinitas.</p>
+
+<p><img src="/assets/imgs/GeolizerDashboard.png" alt="Geolizer Dashboard" title="Geolizer" /></p>
+
+<p>En geolizer es necesario habilitar el redirect widget. Primero se habilita el tema donde se configurara la redireccion y se añade una nueva regla.</p>
+
+<p><img src="/assets/imgs/RedirectWidget.png" alt="Dashboard Redirect" title="Mapa del Mundo" /></p>
+
+<p>Una vez en el panel de la nueva regla se selecciona a que region se desea aplicar y a que url se desea redirigir. La blacklist son las url que no se redireccionaran.</p>
+
+<p>la idea del la configuracion es cuando el usuario este en la region redirigirlo a una pagina X que pueda ser una landing page para la region. Y en la blacklist de geolizer decirle que no rediriga ninguna subcarpeta de traduccion para ese dominio.</p>
+
+<p>Por ejemplo nuestro dominio es store.myshopify.com. al crear el idioma frances langify crea la traduccion bajo la subcarpeta store.myshopify.com/fr/</p>
+
+<p>Todas las url traducidas al frances con langify quedarian de la siguiente forma
+“../fr/collection/” “../fr/pages/” etc. El filtro del blacklist deberia ser https://store.myshopify.com/fr/* para indicar que no redireccione en la region urls con este patron.</p>
+
+<p>De no applicar el filtros en el blacklist para cualquier subcarpeta de idioma, al reconocer la region geolizer siempre nos redireccionaria hacia la url de redireccion.</p>
+
+<h2 id="conclusiones">Conclusiones</h2>
+
+<p>De las muchas configuraciones posibles y aplicaciones esta es una manara efectiva aunque no gratis de internacionalizar una tienda en shopify. Mientras shopify markets esta disponible para los comerciantes</p>
+:ET
